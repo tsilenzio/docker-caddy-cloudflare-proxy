@@ -5,8 +5,19 @@ While the caddy-dns plugin from cloudflare is for allowing Caddy to access Cloud
 
 ## Setup
 
-All that's required for setup is to copy or rename `.env.example` to `.env`
+Create an `.env` file by cloning `.env.example`:
 
 ```
 cp .env.example .env
+```
+
+Then create a docker volume named `caddy_data`:
+
+```
+docker volume create caddy_data
+```
+
+Finally create a docker network named `caddy_network`:
+```
+docker network create caddy_network
 ```
